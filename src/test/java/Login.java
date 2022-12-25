@@ -93,6 +93,32 @@ public class Login {
         registrationButton.click();
 
     }
+    @Test
+    public void ccsLocalTest(){
+        wd.findElement(By.linkText("LOGIN")).click();
+
+
+//task1
+        List<WebElement> div = wd.findElements(By.cssSelector("div"));
+        System.out.println("div="+div.size());
+        List<WebElement> a = wd.findElements(By.cssSelector("a"));
+        System.out.println("a href ="+a.size());
+        List<WebElement> input = wd.findElements(By.cssSelector("input"));
+        System.out.println("input ="+input.size());
+        List<WebElement> button = wd.findElements(By.cssSelector("button"));
+        System.out.println("button="+ button.size() );
+//task 2
+         wd.findElement(By.cssSelector("[placeholder^='Pass']"));
+        wd.findElement(By.cssSelector("[placeholder*='ass']"));
+        wd.findElement(By.cssSelector("[placeholder$='ord']"));
+        //task3
+        wd.findElement(By.cssSelector("div#root[class$='container']"));
+        wd.findElement(By.cssSelector("a[href$='/login']"));
+        wd.findElement(By.cssSelector("input[placeholder='Email']"));
+        wd.findElement(By.cssSelector("button[name='login']"));
+//task 3
+        wd.findElement(By.cssSelector("div.login_login__3EHKB button:last-child"));
+    }
 
     @AfterMethod
     public void postCondition(){
