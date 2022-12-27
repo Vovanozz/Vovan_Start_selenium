@@ -107,23 +107,28 @@ public class Login {
         System.out.println("input ="+input.size());
         List<WebElement> button = wd.findElements(By.cssSelector("button"));
         System.out.println("button="+ button.size() );
+
+
+        wd.findElement(By.cssSelector(".active")); //class==.active
+        wd.findElement(By.cssSelector(".container"));
+        wd.findElement(By.cssSelector("#root")); //id== #root
 //task 2
          wd.findElement(By.cssSelector("[placeholder^='Pass']"));
         wd.findElement(By.cssSelector("[placeholder*='ass']"));
         wd.findElement(By.cssSelector("[placeholder$='ord']"));
         //task3
-        wd.findElement(By.cssSelector("div#root[class$='container']"));
-        wd.findElement(By.cssSelector("a[href$='/login']"));
-        wd.findElement(By.cssSelector("input[placeholder='Email']"));
+        wd.findElement(By.cssSelector("div#root.container"));
+        wd.findElement(By.cssSelector("a[href='/login']"));
+        wd.findElement(By.cssSelector("input[name='email']"));
         wd.findElement(By.cssSelector("button[name='login']"));
 //task 3
-        wd.findElement(By.cssSelector("div.login_login__3EHKB button:last-child"));
+        wd.findElement(By.cssSelector(""));
     }
 
     @AfterMethod
     public void postCondition(){
         // close browser
-       // wd.quit();
+        wd.quit();
 
 
 
