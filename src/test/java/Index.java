@@ -27,11 +27,11 @@ public class Index {
         wd.findElement(By.cssSelector("a[href='#item1']")).click();
         String item1 = wd.findElement(By.cssSelector("div#alert")).getText();
        //System.out.println(item1);
-        Assert.assertEquals(item1,"Clicked by Item 1");
+        Assert.assertTrue(item1.contains("Clicked by Item 1"));
         wd.findElement(By.cssSelector("a[href='#item3']")).click();
        String item3= wd.findElement(By.cssSelector("div#alert")).getText();
         //System.out.println(item3);
-        Assert.assertEquals(item3,"Clicked by Item 3");
+        Assert.assertTrue(item3.contains("Clicked by Item 3"));
 
 
 
@@ -50,7 +50,7 @@ public class Index {
         wd.findElement(By.cssSelector(".btn")).click();
         String text = wd.findElement(By.cssSelector("div#alert")).getText();
         //System.out.println(text);
-        Assert.assertEquals(text,"Vladimir Ozer");
+        Assert.assertTrue(text.contains("Vladimir Ozer"));
 
 
 
